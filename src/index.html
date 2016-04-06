@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <!-- sample angular code -->
+    <div class="container">
+      <div ng-controller="searchController">
+        <h2 class="text-center">Angular OMDb API Search</h2>
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3">
+              <input type="text" ng-model="searchTerm" class="form-control" name="searchTerm"/>
+              <br />
+              <div class="col-lg-1 col-lg-offset-5">
+                <a href="/#/movies" type="submit" class="btn btn-lg btn-danger" ng-click="searchMovie(searchTerm)">Search</a>
+              </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <div ng-view>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/filters.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+  </body>
+</html>
