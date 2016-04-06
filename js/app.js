@@ -2,12 +2,16 @@
 
 var app = angular.module('myApp', ["ngRoute"]);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
-    .when('#/movies', {
+    .when('/movies', {
       templateUrl: 'partials/searchAll.html',
     })
-    .when('#/oneMovie', {
+    .when('/oneMovie', {
       templateUrl: '../partials/searchOne.html',
+    });
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
     });
 });
