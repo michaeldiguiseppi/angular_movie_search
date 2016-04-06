@@ -8,7 +8,7 @@ app.config(function($routeProvider, $locationProvider) {
       templateUrl: 'partials/searchAll.html',
     })
     .when('/oneMovie', {
-      templateUrl: '../partials/searchOne.html',
+      templateUrl: 'partials/searchOne.html',
     });
     $locationProvider.html5Mode({
       enabled: true,
