@@ -2,7 +2,7 @@
 <html lang="en" ng-app='myApp'>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Movie Search</title>
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -17,15 +17,36 @@
           <div class="col-lg-6 col-lg-offset-3">
               <input type="text" ng-model="searchTerm" class="form-control" name="searchTerm"/>
               <br />
-              <div class="col-lg-1 col-lg-offset-5">
+              <div class="col-lg-5">
+                <label for="tomatoes">
+                  <input type="checkbox" ng-model="tomatoes" name="tomatoes" id="tomatoes" />
+                  &nbsp;&nbsp;Include Rotten Tomatoes
+                </label>
+              </div>
+              <div class="col-lg-2">
                 <a href="/#/movies" type="submit" class="btn btn-lg btn-danger" ng-click="searchMovie(searchTerm)">Search</a>
+              </div>
+              <div class="col-lg-4 col-lg-offset-1">
+                <select ng-model="type" name="type" class="form-control">
+                  <option value="" disabled selected>
+                    -- Select a Type --
+                  </option>
+                  <option value="movie">
+                    Movie
+                  </option>
+                  <option value="series">
+                    Series
+                  </option>
+                  <option value="episode">
+                    Episode
+                  </option>
+                </select>
               </div>
           </div>
         </div>
         <br />
         <hr />
         <br />
-
         <div ng-view>
 
         </div>
