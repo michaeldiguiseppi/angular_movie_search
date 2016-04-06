@@ -4,10 +4,10 @@ var app = angular.module('myApp', ["ngRoute"]);
 
 app.config(function($routeProvider) {
   $routeProvider
-    .when('angular_movie_search/#/movies', {
+    .when('#/movies', {
       templateUrl: 'partials/searchAll.html',
     })
-    .when('angular_movie_search/#/oneMovie', {
+    .when('#/oneMovie', {
       templateUrl: '../partials/searchOne.html',
     });
 });
